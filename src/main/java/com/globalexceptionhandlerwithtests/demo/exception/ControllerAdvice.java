@@ -9,6 +9,6 @@ public class ControllerAdvice {
 
     @ExceptionHandler(EmptyInputException.class)
     public ResponseEntity<String> handleEmtpyInput(EmptyInputException emptyInputException) {
-        return new ResponseEntity<>(emptyInputException.getErrorMessage(), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(emptyInputException.getMessage(), HttpStatus.BAD_REQUEST);
     }
 }
